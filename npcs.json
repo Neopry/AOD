@@ -1,0 +1,563 @@
+{
+  "npcs": [
+    {
+      "id": "villager_01",
+      "name": "John the Farmer",
+      "role": "farmer",
+      "dialogue": [
+        "Ahoj, cizinče! Potřebuješ čerstvou zeleninu?",
+        "Úroda byla letos dobrá.",
+        "Viděl jsi nový trh ve vesnici?",
+        "Slyšel jsem, že se blíží festival!",
+        "Dnes je krásné počasí na práci na poli.",
+        "Můj syn mi pomáhá s farmařením, je to šikovný kluk."
+      ],
+      "location": { "x": 100, "y": 200, "z": 0 },
+      "reaction": {
+        "playerAction": "pozdravit",
+        "response": "Hezký den přeji!",
+        "alternateResponses": [
+          "Jak se dnes máš?",
+          "Rád tě vidím, cizinče!"
+        ]
+      },
+      "inventory": [
+        { "item": "Carrot", "price": 5 },
+        { "item": "Potato", "price": 3 }
+      ],
+      "emotion": "happy",
+      "relationships": {
+        "player": "neutral",
+        "blacksmith_01": "friend",
+        "merchant_01": "acquaintance"
+      },
+      "history": "John farmaří ve vesnici už přes 20 let. Je velmi respektovaný komunitou. Často obchoduje s Gregem Kovářem a občas pomáhá Lile Obchodnici se zásobami. John je známý svou laskavostí a ochotou pomoci ostatním. V mládí se účastnil vesnických slavností jako hlavní organizátor a jeho zelenina vyhrála několik soutěží. Jeho farma byla kdysi malá, ale díky tvrdé práci a podpoře rodiny se rozrostla. John také rád vypráví příběhy o svém mládí, kdy cestoval po okolních vesnicích a učil se nové zemědělské techniky.",
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "herb_collection",
+          "newEmotion": "grateful"
+        },
+        "onInteraction": {
+          "playerAction": "pozdravit",
+          "newEmotion": "friendly"
+        }
+      },
+      "dynamicBehavior": {
+        "dailyRoutine": [
+          { "time": "morning", "location": { "x": 110, "y": 210, "z": 0 } },
+          { "time": "afternoon", "location": { "x": 120, "y": 220, "z": 0 } },
+          { "time": "evening", "location": { "x": 100, "y": 200, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "rainy": { "x": 90, "y": 190, "z": 0 }
+        }
+      }
+    },
+    {
+      "id": "blacksmith_01",
+      "name": "Greg the Blacksmith",
+      "role": "blacksmith",
+      "dialogue": [
+        "Potřebuješ nový meč nebo zbroj?",
+        "Kovářská výheň je dnes horká.",
+        "Přines mi železo a něco ti vykovám.",
+        "Mám nové zboží, podívej se!",
+        "Dnes jsem dokončil zakázku pro strážce."
+      ],
+      "location": { "x": 150, "y": 250, "z": 0 },
+      "reaction": {
+        "playerAction": "obchodovat",
+        "response": "Ukážu ti své zboží.",
+        "alternateResponses": [
+          "Podívej se, co mám na skladě.",
+          "Mám pro tebe něco speciálního."
+        ]
+      },
+      "emotion": "focused",
+      "relationships": {
+        "player": "neutral",
+        "villager_01": "friend",
+        "guard_01": "ally"
+      },
+      "history": "Greg je známý svou výjimečnou řemeslnou zručností. Má silné pouto s Johnem Farmářem, který mu dodává jídlo, a Derekem Strážcem, který si u něj často objednává zbraně. Greg pochází z rodiny kovářů, která sloužila vesnici po generace. Jeho otec ho naučil tajemství výroby legendárních mečů, které jsou vysoce ceněné v okolních městech. Greg také rád experimentuje s novými technikami kování a často tráví noci v dílně, kde pracuje na svých mistrovských dílech. Jeho sen je jednou vytvořit zbraň, která se stane legendou.",
+      "additionalQuests": [
+        {
+          "id": "armor_upgrade",
+          "description": "Bring Greg 10 iron ores for an armor upgrade.",
+          "reward": { "gold": 100, "item": "Upgraded Armor" },
+          "status": "not started"
+        },
+        {
+          "id": "forge_repair",
+          "description": "Help Greg repair his forge by finding a rare heat-resistant stone.",
+          "reward": { "gold": 150, "item": "Blacksmith's Hammer" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "armor_upgrade",
+          "newEmotion": "proud"
+        },
+        "onInteraction": {
+          "playerAction": "obchodovat",
+          "newEmotion": "focused"
+        }
+      }
+    },
+    {
+      "id": "merchant_01",
+      "name": "Lila the Merchant",
+      "role": "merchant",
+      "dialogue": [
+        "Vítej v mém obchodě!",
+        "Mám to nejlepší zboží v kraji.",
+        "Hledáš něco speciálního?",
+        "Na trhu je dnes rušno, že?",
+        "Dnes jsem dostala nové zásoby, podívej se!"
+      ],
+      "location": { "x": 200, "y": 300, "z": 0 },
+      "reaction": {
+        "playerAction": "koupit",
+        "response": "Klidně si prohlédni zboží.",
+        "alternateResponses": [
+          "Mám pro tebe výhodnou nabídku.",
+          "Podívej se na mé nejlepší produkty."
+        ]
+      },
+      "dynamicLocation": {
+        "schedule": [
+          { "time": "morning", "location": { "x": 200, "y": 300, "z": 0 } },
+          { "time": "afternoon", "location": { "x": 220, "y": 320, "z": 0 } },
+          { "time": "evening", "location": { "x": 180, "y": 280, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "rainy": { "x": 190, "y": 290, "z": 0 }
+        }
+      },
+      "inventory": [
+        { "item": "Silk Cloth", "price": 25 },
+        { "item": "Spices", "price": 15 }
+      ],
+      "emotion": "neutral",
+      "relationships": {
+        "player": "neutral",
+        "villager_01": "acquaintance",
+        "healer_01": "business partner"
+      },
+      "history": "Lila cestuje mezi městy, obchoduje se zbožím a navazuje kontakty. Často spolupracuje s Mirou Léčitelkou na prodeji lektvarů a bylin. Lila začala obchodovat jako mladá dívka, když zdědila malý stánek po svém otci. Díky své vytrvalosti a obchodnímu talentu se jí podařilo vybudovat prosperující obchodní síť. Její obchodní cesty ji zavedly do vzdálených zemí, kde se naučila cizí jazyky a získala přístup k exotickému zboží. Lila je známá svou schopností vyjednávat a často dokáže uzavřít obchody, které se zdají nemožné.",
+      "additionalQuests": [
+        {
+          "id": "rare_goods",
+          "description": "Find a rare artifact for Lila to sell in her shop.",
+          "reward": { "gold": 200, "item": "Exotic Trinket" },
+          "status": "not started"
+        },
+        {
+          "id": "market_expansion",
+          "description": "Help Lila expand her market by delivering supplies to a nearby town.",
+          "reward": { "gold": 100, "item": "Merchant's Ledger" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "rare_goods",
+          "newEmotion": "excited"
+        },
+        "onInteraction": {
+          "playerAction": "koupit",
+          "newEmotion": "neutral"
+        }
+      }
+    },
+    {
+      "id": "healer_01",
+      "name": "Mira the Healer",
+      "role": "healer",
+      "dialogue": [
+        "Vítej, cestovateli. Potřebuješ léčení?",
+        "Byliny a lektvary jsou mou specialitou.",
+        "Buď opatrný, les je nebezpečný.",
+        "Dnes jsem připravila nový lektvar, chceš ho vyzkoušet?",
+        "Mnoho lidí dnes přišlo pro pomoc, je to náročný den."
+      ],
+      "location": { "x": 300, "y": 400, "z": 0 },
+      "reaction": {
+        "playerAction": "léčit",
+        "response": "Postarám se o tvé rány.",
+        "alternateResponses": [
+          "Tvá zranění nejsou vážná, brzy budeš v pořádku.",
+          "Potřebuješ ještě něco jiného?"
+        ]
+      },
+      "inventory": [
+        { "item": "Healing Potion", "price": 50 },
+        { "item": "Mana Potion", "price": 40 }
+      ],
+      "quest": {
+        "id": "herb_collection",
+        "description": "Collect 5 rare herbs from the forest.",
+        "reward": { "gold": 100, "item": "Special Elixir" },
+        "status": "not started"
+      },
+      "emotion": "calm",
+      "relationships": {
+        "player": "neutral",
+        "merchant_01": "business partner",
+        "guard_01": "trusted"
+      },
+      "history": "Mira je zkušená léčitelka, která pomohla mnoha vesničanům. Úzce spolupracuje s Lilou Obchodnicí na distribuci svých lektvarů a získala důvěru Dereka Strážce tím, že ošetřovala zraněné vojáky. Mira se naučila léčitelství od své babičky, která byla známou bylinkářkou. Její znalosti o vzácných bylinách a lektvarech jsou vyhledávány i za hranicemi vesnice. Mira také vede tajné zápisky o svých experimentech s léčivými rostlinami a doufá, že jednoho dne objeví univerzální lék na všechny nemoci.",
+      "additionalQuests": [
+        {
+          "id": "potion_delivery",
+          "description": "Deliver 3 healing potions to Derek the Guard.",
+          "reward": { "gold": 50, "item": "Herbal Medicine" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "potion_delivery",
+          "newEmotion": "relieved"
+        },
+        "onInteraction": {
+          "playerAction": "léčit",
+          "newEmotion": "calm"
+        }
+      },
+      "dynamicBehavior": {
+        "dailyRoutine": [
+          { "time": "morning", "location": { "x": 310, "y": 410, "z": 0 } },
+          { "time": "afternoon", "location": { "x": 320, "y": 420, "z": 0 } },
+          { "time": "evening", "location": { "x": 300, "y": 400, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "stormy": { "x": 290, "y": 390, "z": 0 }
+        }
+      }
+    },
+    {
+      "id": "guard_01",
+      "name": "Derek the Guard",
+      "role": "guard",
+      "dialogue": [
+        "Stůj! Jaký je tvůj důvod návštěvy?",
+        "Město je pod mou ochranou v bezpečí.",
+        "Viděl jsi něco podezřelého?",
+        "Buď ostražitý, cestovateli.",
+        "Dnes jsem měl těžký den, ale město je v bezpečí."
+      ],
+      "location": { "x": 400, "y": 500, "z": 0 },
+      "reaction": {
+        "playerAction": "hlásit",
+        "response": "Děkuji za informaci.",
+        "alternateResponses": [
+          "To je důležité, budu to vyšetřovat.",
+          "Díky za hlášení, postarám se o to."
+        ]
+      },
+      "quest": {
+        "id": "bandit_hunt",
+        "description": "Defeat 3 bandits in the nearby woods.",
+        "reward": { "gold": 150, "item": "Guard's Shield" },
+        "status": "not started"
+      },
+      "dynamicBehavior": {
+        "patrolRoute": [
+          { "x": 400, "y": 500, "z": 0 },
+          { "x": 420, "y": 520, "z": 0 },
+          { "x": 380, "y": 480, "z": 0 }
+        ],
+        "weatherCondition": {
+          "rainy": { "x": 390, "y": 490, "z": 0 }
+        }
+      },
+      "emotion": "alert",
+      "relationships": {
+        "player": "neutral",
+        "blacksmith_01": "ally",
+        "healer_01": "trusted"
+      },
+      "history": "Derek slouží jako strážce už 10 let. Je oddaný ochraně města a jeho obyvatel. Často se spoléhá na Grega Kováře při výrobě zbraní a na Miru Léčitelku při ošetřování zranění. Derek byl kdysi mladým dobrodruhem, který cestoval po světě, ale rozhodl se usadit ve vesnici, aby chránil její obyvatele před nebezpečím. Jeho zkušenosti z cest mu pomáhají při řešení konfliktů a jeho příběhy o dobrodružstvích inspirují mladé vesničany k odvaze a čestnosti.",
+      "additionalQuests": [
+        {
+          "id": "missing_patrol",
+          "description": "Investigate the disappearance of a patrol unit in the forest.",
+          "reward": { "gold": 200, "item": "Guard's Helmet" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "bandit_hunt",
+          "newEmotion": "confident"
+        },
+        "onInteraction": {
+          "playerAction": "hlásit",
+          "newEmotion": "alert"
+        }
+      }
+    },
+    {
+      "id": "bard_01",
+      "name": "Elyas the Bard",
+      "role": "bard",
+      "dialogue": [
+        "Zdravím, cestovateli! Chceš slyšet píseň?",
+        "Příběhy, které zpívám, stojí za pár mincí.",
+        "Slyšel jsi legendu o ztraceném králi?"
+      ],
+      "location": { "x": 500, "y": 600, "z": 0 },
+      "reaction": {
+        "playerAction": "poslouchat",
+        "response": "Zahraji ti melodii."
+      },
+      "dynamicBehavior": {
+        "performanceSchedule": [
+          { "time": "morning", "location": { "x": 500, "y": 600, "z": 0 } },
+          { "time": "evening", "location": { "x": 520, "y": 620, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "rainy": { "x": 480, "y": 580, "z": 0 }
+        }
+      },
+      "inventory": [
+        { "item": "Lute", "price": 100 },
+        { "item": "Songbook", "price": 50 }
+      ],
+      "emotion": "cheerful",
+      "relationships": {
+        "player": "neutral",
+        "villager_01": "acquaintance"
+      },
+      "history": "Elyas je potulný bard, který baví vesničany svou hudbou a příběhy. Je oblíbený díky své veselé povaze a poutavým vystoupením. Elyas se naučil hrát na loutnu od svého strýce, který byl dvorním hudebníkem. Jeho písně často obsahují skryté zprávy a legendy, které inspirují posluchače.",
+      "quest": {
+        "id": "lost_song",
+        "description": "Help Elyas find the missing pages of his songbook.",
+        "reward": { "gold": 75, "item": "Rare Songbook" },
+        "status": "not started"
+      },
+      "additionalQuests": [
+        {
+          "id": "inspiring_song",
+          "description": "Help Elyas compose a new song by gathering stories from villagers.",
+          "reward": { "gold": 50, "item": "Unique Songbook" },
+          "status": "not started"
+        },
+        {
+          "id": "lost_instrument",
+          "description": "Find Elyas's lost flute in the forest.",
+          "reward": { "gold": 75, "item": "Mastercrafted Flute" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "lost_song",
+          "newEmotion": "joyful"
+        },
+        "onInteraction": {
+          "playerAction": "poslouchat",
+          "newEmotion": "cheerful"
+        }
+      }
+    },
+    {
+      "id": "hunter_01",
+      "name": "Kael the Hunter",
+      "role": "hunter",
+      "dialogue": [
+        "Les je plný nebezpečí, ale i odměn.",
+        "Potřebuješ čerstvé maso?",
+        "Dávej pozor, vlci jsou neklidní."
+      ],
+      "location": { "x": 600, "y": 700, "z": 0 },
+      "reaction": {
+        "playerAction": "obchodovat",
+        "response": "Mám na prodej kvalitní kožešiny a maso."
+      },
+      "dynamicBehavior": {
+        "huntingSchedule": [
+          { "time": "morning", "location": { "x": 620, "y": 720, "z": 0 } },
+          { "time": "afternoon", "location": { "x": 600, "y": 700, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "rainy": { "x": 580, "y": 680, "z": 0 }
+        }
+      },
+      "inventory": [
+        { "item": "Wolf Pelt", "price": 30 },
+        { "item": "Game Meat", "price": 20 },
+        { "item": "Hunter's Bow", "price": 150 }
+      ],
+      "emotion": "focused",
+      "relationships": {
+        "player": "neutral",
+        "guard_01": "ally"
+      },
+      "history": "Kael je zkušený lovec, který zásobuje vesnici čerstvým masem a kožešinami. Často spolupracuje s Derekem Strážcem na zajištění bezpečnosti lesa. Kael vyrůstal v divočině a naučil se přežít v nehostinných podmínkách. Jeho znalosti o zvířatech a jejich chování jsou neocenitelné pro vesnici.",
+      "quest": {
+        "id": "wolf_hunt",
+        "description": "Eliminate 5 wolves threatening the village.",
+        "reward": { "gold": 100, "item": "Hunter's Cloak" },
+        "status": "not started"
+      },
+      "additionalQuests": [
+        {
+          "id": "bear_hunt",
+          "description": "Eliminate a dangerous bear threatening the village.",
+          "reward": { "gold": 200, "item": "Bearskin Cloak" },
+          "status": "not started"
+        },
+        {
+          "id": "trap_repair",
+          "description": "Repair Kael's hunting traps by finding sturdy materials.",
+          "reward": { "gold": 100, "item": "Hunter's Toolkit" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "wolf_hunt",
+          "newEmotion": "satisfied"
+        },
+        "onInteraction": {
+          "playerAction": "obchodovat",
+          "newEmotion": "focused"
+        }
+      }
+    },
+    {
+      "id": "alchemist_01",
+      "name": "Selena the Alchemist",
+      "role": "alchemist",
+      "dialogue": [
+        "Vítej v mé laboratoři! Opatrně s lektvary.",
+        "Alchymie je umění i věda.",
+        "Hledáš něco, co ti zlepší schopnosti?"
+      ],
+      "location": { "x": 700, "y": 800, "z": 0 },
+      "reaction": {
+        "playerAction": "obchodovat",
+        "response": "Mám lektvary pro každou příležitost."
+      },
+      "dynamicBehavior": {
+        "labSchedule": [
+          { "time": "morning", "location": { "x": 700, "y": 800, "z": 0 } },
+          { "time": "afternoon", "location": { "x": 720, "y": 820, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "stormy": { "x": 680, "y": 780, "z": 0 }
+        }
+      },
+      "inventory": [
+        { "item": "Strength Potion", "price": 60 },
+        { "item": "Invisibility Potion", "price": 120 },
+        { "item": "Alchemy Ingredients", "price": 30 }
+      ],
+      "emotion": "curious",
+      "relationships": {
+        "player": "neutral",
+        "healer_01": "colleague",
+        "merchant_01": "supplier"
+      },
+      "history": "Selena je talentovaná alchymistka, která experimentuje se vzácnými ingrediencemi. Často spolupracuje s Mirou Léčitelkou a Lilou Obchodnicí na získávání materiálů a distribuci svých lektvarů. Selena studovala alchymii na prestižní akademii a získala uznání za své inovativní recepty. Její laboratoř je plná záhadných přístrojů a knih.",
+      "quest": {
+        "id": "rare_ingredient_hunt",
+        "description": "Find 3 rare ingredients for Selena's experiments.",
+        "reward": { "gold": 150, "item": "Advanced Potion Kit" },
+        "status": "not started"
+      },
+      "additionalQuests": [
+        {
+          "id": "potion_mastery",
+          "description": "Help Selena create a powerful potion by finding rare ingredients.",
+          "reward": { "gold": 250, "item": "Master Alchemist's Potion" },
+          "status": "not started"
+        },
+        {
+          "id": "lab_upgrade",
+          "description": "Upgrade Selena's lab by delivering advanced tools.",
+          "reward": { "gold": 150, "item": "Enhanced Alchemy Kit" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "rare_ingredient_hunt",
+          "newEmotion": "inspired"
+        },
+        "onInteraction": {
+          "playerAction": "obchodovat",
+          "newEmotion": "curious"
+        }
+      }
+    },
+    {
+      "id": "fisherman_01",
+      "name": "Tomas the Fisherman",
+      "role": "fisherman",
+      "dialogue": [
+        "Moře je dnes klidné, ideální na rybaření.",
+        "Chceš koupit čerstvé ryby?",
+        "Legenda říká, že v jezeře je obří ryba."
+      ],
+      "location": { "x": 800, "y": 900, "z": 0 },
+      "reaction": {
+        "playerAction": "obchodovat",
+        "response": "Čerstvý úlovek dne!"
+      },
+      "dynamicBehavior": {
+        "fishingSchedule": [
+          { "time": "morning", "location": { "x": 820, "y": 920, "z": 0 } },
+          { "time": "evening", "location": { "x": 800, "y": 900, "z": 0 } }
+        ],
+        "weatherCondition": {
+          "rainy": { "x": 780, "y": 880, "z": 0 }
+        }
+      },
+      "inventory": [
+        { "item": "Fresh Fish", "price": 10 },
+        { "item": "Fishing Rod", "price": 50 },
+        { "item": "Bait", "price": 5 }
+      ],
+      "emotion": "relaxed",
+      "relationships": {
+        "player": "neutral",
+        "villager_01": "customer"
+      },
+      "history": "Tomas rybaří od dětství. Zásobuje vesničany čerstvými rybami a sní o ulovení legendární obří ryby. Tomas se naučil rybařit od svého dědečka, který mu vyprávěl příběhy o tajemných tvorech žijících v hlubinách. Jeho loďka je jeho nejcennějším majetkem.",
+      "quest": {
+        "id": "giant_fish_hunt",
+        "description": "Help Tomas catch the legendary giant fish.",
+        "reward": { "gold": 200, "item": "Golden Fishing Rod" },
+        "status": "not started"
+      },
+      "additionalQuests": [
+        {
+          "id": "net_repair",
+          "description": "Repair Tomas's fishing net by finding strong fibers.",
+          "reward": { "gold": 50, "item": "Reinforced Fishing Net" },
+          "status": "not started"
+        },
+        {
+          "id": "deep_sea_fishing",
+          "description": "Help Tomas catch rare deep-sea fish.",
+          "reward": { "gold": 300, "item": "Rare Fish Trophy" },
+          "status": "not started"
+        }
+      ],
+      "dynamicEmotion": {
+        "onQuestComplete": {
+          "questId": "giant_fish_hunt",
+          "newEmotion": "ecstatic"
+        },
+        "onInteraction": {
+          "playerAction": "obchodovat",
+          "newEmotion": "relaxed"
+        }
+      }
+    }
+  ]
+}

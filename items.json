@@ -1,0 +1,2390 @@
+{
+    "items": [
+        {
+            "id": "wood_log",
+            "name": "Dřevěný kláda",
+            "description": "Pevná dřevěná kláda, užitečná pro řemeslnou výrobu a stavbu.",
+            "weight": 5,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource"
+        },
+        {
+            "id": "wooden_plank",
+            "name": "Prkno",
+            "description": "Dřevěné prkno, užitečné pro řemeslnou výrobu a stavbu.",
+            "weight": 3,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource"
+        },
+        {
+            "id": "wood_bottle",
+            "name": "Dřevěná lahvička",
+            "description": "Dřevěná lahvička, používá se na výrobu lektvarů.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "saw",
+                    "knife"
+                ],
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "yieldQuantity": 2
+            }
+        },
+        {
+            "id": "saw",
+            "name": "Pila",
+            "description": "Ruční pila, dobrá k použití na výrobu nebo řezání stromů na klády.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "wooden_hoe",
+            "name": "Dřevěná motyka",
+            "description": "Dřevěná motyka slouží k obdělávání pole.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "wood_stick",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "stone_hoe",
+            "name": "Kamenná motyka",
+            "description": "Kamenná motyka slouží k obdělávání pole.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "iron_hoe",
+            "name": "Železná motyka",
+            "description": "Železná motyka slouží k obdělávání pole.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "stone_knife",
+            "name": "Kamenný nůž",
+            "description": "Kamenný nůž slouží ke stahování zvěře z kůže a k výrobě",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "iron_knife",
+            "name": "Železný nůž",
+            "description": "Železný nůž slouží ke stahování zvěře z kůže a k výrobě",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "stone_axe",
+            "name": "Kamenná sekera",
+            "description": "Kamenná sekera slouží ke kácení stromů a následné rozpracování na klády",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_stick",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            },
+            "skillPoints": {
+                "type": "Mining",
+                "points": 8
+            }
+        },
+        {
+            "id": "iron_axe",
+            "name": "Železná sekera",
+            "description": "Železná sekera slouží ke kácení stromů a následné rozpracování na klády",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "wooden_spear",
+            "name": "Dřevěný oštěp",
+            "description": "Dřevěný oštěp slouží k lovu divoke zvěře a sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "stone_spear",
+            "name": "Kamenný oštěp",
+            "description": "Kamenný oštěp slouží k lovu divoké zvěře a sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "iron_spear",
+            "name": "Železný oštěp",
+            "description": "Železný oštěp oštěp slouží k lovu divoké zvěře a sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "bow",
+            "name": "Luk",
+            "description": "Luk slouží k lovu divoké zvěře a sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wood_stick",
+                        "quantity": 10
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            },
+            "skillPoints": {
+                "type": "Hunting",
+                "points": 10
+            }
+        },
+        {
+            "id": "longbow",
+            "name": "Dlouhý luk",
+            "description": "Dlouhý luk slouží k lovu divoké zvěře a sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "recurve_bow",
+            "name": "Reflexní luk",
+            "description": "Reflexní luk slouží k lovu divoké zvěře a sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "stone_knife",
+                    "iron_knife"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "wood_arrow",
+            "name": "Dřevěný šíp",
+            "description": "Dřevěný šíp slouží jako střelivo pro luk",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_stick",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "feather",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "stone_knife",
+                    "iron_knife"
+                ],
+                "yieldQuantity": 5
+            }
+        },
+        {
+            "id": "stone_arrow",
+            "name": "Kamenný šíp",
+            "description": "Kamenný šíp slouží jako střelivo pro luk",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_stick",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "feather",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "stone_knife",
+                    "iron_knife",
+                    "wood_hammer",
+                    "iron_hammer",
+                    "stone_hammer"
+                ],
+                "yieldQuantity": 5
+            }
+        },
+        {
+            "id": "iron_arrow",
+            "name": "Železný šíp",
+            "description": "Železný šíp slouží jako střelivo pro luk.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_stick",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "feather",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "buildingRequired": [
+                    "forge"
+                ],
+                "toolsRequired": [
+                    "stone_knife",
+                    "iron_knife",
+                    "wood_hammer",
+                    "iron_hammer",
+                    "stone_hammer"
+                ],
+                "yieldQuantity": 5
+            }
+        },
+        {
+            "id": "wood_cudgel",
+            "name": "Dřevěný kyj",
+            "description": "Dřevěnný kyj slouží k sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "iron_cudgel",
+            "name": "Železný kyj",
+            "description": "Železný kyj slouží k sebeobraně",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "buildingRequired": [
+                    "forge"
+                ],
+                "toolsRequired": [
+                    "stone_knife",
+                    "iron_knife",
+                    "wood_hammer",
+                    "iron_hammer",
+                    "stone_hammer"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "nails",
+            "name": "Hřebíky",
+            "description": "Hřebíky jsou nedílnou šoučástí budov a nástrojů.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "wood_hammer",
+            "name": "Dřevěné kladivo",
+            "description": "Dřevěné kladivo slouží ke stavbě domů ale i k výrobě mnoha nástrojů.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 5
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "stone_hammer",
+            "name": "Kamenné kladivo",
+            "description": "Kamenné kladivo slouží ke stavbě domů ale i k výrobě mnoha nástrojů.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 5
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "iron_hammer",
+            "name": "Železné kladivo",
+            "description": "Železné kladivo slouží ke stavbě domů ale i k výrobě mnoha nástrojů.",
+            "weight": 0.2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "nails",
+                        "quantity": 5
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "2s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "iron_ore",
+            "name": "Železná ruda",
+            "description": "Železná ruda, z které se vyrábí Železný odlitek v kovárně.",
+            "weight": 4,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "harvestable": {
+                "isHarvestable": true,
+                "sources": [
+                    {
+                        "type": "npc",
+                        "name": "Mine Worker",
+                        "location": "mines",
+                        "yieldPerHarvest": 5,
+                        "tradeCost": 3
+                    },
+                    {
+                        "type": "world",
+                        "locations": [
+                            "mountains",
+                            "cave"
+                        ],
+                        "toolsRequired": [
+                            "pickaxe"
+                        ],
+                        "yieldPerHarvest": 3,
+                        "respawnTime": "60m"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "cooper_ore",
+            "name": "Měděná ruda",
+            "description": "Měděná ruda, z které se vyrábí Železný odlitek v kovárně.",
+            "weight": 4,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "harvestable": {
+                "isHarvestable": true,
+                "sources": [
+                    {
+                        "type": "npc",
+                        "name": "Mine Worker",
+                        "location": "mines",
+                        "yieldPerHarvest": 5,
+                        "tradeCost": 3
+                    },
+                    {
+                        "type": "world",
+                        "locations": [
+                            "mountains",
+                            "cave"
+                        ],
+                        "toolsRequired": [
+                            "pickaxe"
+                        ],
+                        "yieldPerHarvest": 3,
+                        "respawnTime": "60m"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "gold_ore",
+            "name": "Zlatá ruda",
+            "description": "Zlatá ruda, z které se vyrábí Železný odlitek v kovárně.",
+            "weight": 4,
+            "value": 9,
+            "dynamicValue": true,
+            "type": "resource",
+            "harvestable": {
+                "isHarvestable": true,
+                "sources": [
+                    {
+                        "type": "npc",
+                        "name": "Mine Worker",
+                        "location": "mines",
+                        "yieldPerHarvest": 5,
+                        "tradeCost": 3
+                    },
+                    {
+                        "type": "world",
+                        "locations": [
+                            "mountains",
+                            "cave"
+                        ],
+                        "toolsRequired": [
+                            "pickaxe"
+                        ],
+                        "yieldPerHarvest": 3,
+                        "respawnTime": "60m"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "iron_bar",
+            "name": "Železný odlitek",
+            "description": "Železný odlitek, který slouží k výrobě.",
+            "weight": 2,
+            "value": 9,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "iron_ore",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "10s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ]
+            }
+        },
+        {
+            "id": "cooper_bar",
+            "name": "Měděný odlitek",
+            "description": "Měděný odlitek, který slouží k výrobě.",
+            "weight": 2,
+            "value": 9,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "cooper_ore",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "10s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ]
+            }
+        },
+        {
+            "id": "gold_bar",
+            "name": "Zlatý odlitek",
+            "description": "Zlatý odlitek.",
+            "weight": 1,
+            "value": 20,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "gold_ore",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "10s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ]
+            },
+            "npcPreference": ["Jeweler"],
+            "questItem": true,
+            "availabilitySeason": ["spring", "summer", "autumn", "winter"]
+        },
+        {
+            "id": "stone_bricks",
+            "name": "Kamenný blok",
+            "description": "Opracovaný kámen, užitečný pro řemeslnou výrobu a stavbu.",
+            "weight": 2,
+            "value": 2,
+            "dynamicValue": true,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "stone",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "3s",
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            },
+            "npcPreference": ["Builder"],
+            "questItem": false,
+            "availabilitySeason": ["spring", "summer", "autumn", "winter"]
+        },
+        {
+            "id": "stone",
+            "name": "Kámen",
+            "description": "Kus kamene, používaný při stavbě a řemeslné výrobě.",
+            "weight": 3,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource"
+        },
+        {
+            "id": "wood_stick",
+            "name": "Klacek",
+            "description": "Dřevěný klacek, používaná se při stavbě a řemeslné výrobě.",
+            "weight": 0.2,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource"
+        },
+        {
+            "id": "wooden_sword",
+            "name": "Dřevěný meč",
+            "description": "Základní dřevěný meč, není příliš odolný, ale lepší než holé ruce.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s"
+            },
+            "skillPoints": {
+                "type": "Combat",
+                "points": 5
+            },
+            "levelRequirement": 1,
+            "npcPreference": ["Blacksmith", "Warrior"],
+            "questItem": false,
+            "availabilitySeason": ["spring", "summer", "autumn", "winter"]
+        },
+        {
+            "id": "simple_torch",
+            "name": "Jednoduchá pochodeň",
+            "description": "Jednoduchá pochodeň slouží k osvětlení okolní tmy.",
+            "weight": 5,
+            "value": 10,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 10,
+            "staminaCost": 5,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "uncommon",
+            "weightCategory": "medium",
+            "lore": "Vyrobený zručnými kameníky.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "wood_stick",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "3s"
+            },
+            "skillPoints": {
+                "type": "Survival",
+                "points": 5
+            }
+        },
+        {
+            "id": "torch",
+            "name": "Pochodeň",
+            "description": "Pochodeň osvětluje okolní tmu a ulice.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s"
+            }
+        },
+        {
+            "id": "oil_lamp",
+            "name": "Olejová lampa",
+            "description": "Olejová lampa osvětluje okolní tmu a ulice.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "fish_oil",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "iron_ore",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "20s",
+                "buildingRequired":[
+                    "forge"
+                ],
+                "toolsRequired": [
+                    "iron_hammer"
+                ]
+            }
+        },
+        {
+            "id": "bucket",
+            "name": "Vědro",
+            "description": "Vědro na mléko a vodu.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            }
+        },
+        {
+            "id": "wooden_shovel",
+            "name": "Dřevěná lopata",
+            "description": "Dřevěná lopata slouží ke kopání jílu, hlíny a úpravě cest.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s"
+            }
+        },
+        {
+            "id": "stone_shovel",
+            "name": "Kamenná lopata",
+            "description": "Kamenná lopata slouží ke kopání jílu, hlíny a úpravě cest.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            }
+        },
+        {
+            "id": "iron_shovel",
+            "name": "Železná lopata",
+            "description": "Železná lopata slouží ke kopání jílu, hlíny a úpravě cest.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            }
+        },
+        {
+            "id": "iron_sword",
+            "name": "Železný meč",
+            "description": "Ostrý a odolný meč z železa, velmi účinný v boji.",
+            "weight": 7,
+            "value": 20,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 20,
+            "staminaCost": 7,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "rare",
+            "weightCategory": "medium",
+            "lore": "Ukutý mistrem kovářem.",
+            "environmentEffect": "Can cut small bushes, break weak objects, and damage wooden structures.",
+            "playerEffect": "slows movement slightly",
+            "marketDemand": "low",
+            "decomposable": false,
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "wooden_pins",
+                        "quantity": 4
+                    }
+                ],
+                "craftingTime": "6s",
+                "toolsRequired": [
+                    "iron_hammer"
+                ],
+                "buildingRequired": [
+                    "forge"
+                ]
+            },
+            "skillPoints": {
+                "type": "Combat",
+                "points": 20
+            },
+            "levelRequirement": 5,
+            "npcPreference": ["Blacksmith", "Knight"],
+            "questItem": false,
+            "availabilitySeason": ["spring", "summer", "autumn", "winter"]
+        },
+        {
+            "id": "wood_fishing_spear",
+            "name": "Dřevěný rybářský oštěp",
+            "description": "Dřevěný rybářský oštěp slouží k lovu ryb a sebeobraně.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s"
+            }
+        },
+        {
+            "id": "stone_fishing_spear",
+            "name": "Kamenný rybářský oštěp",
+            "description": "Kamenný rybářský oštěp slouží k lovu ryb a sebeobraně.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            }
+        },
+        {
+            "id": "iron_fishing_spear",
+            "name": "Železný rybářský oštěp",
+            "description": "Kamenný rybářský oštěp slouží k lovu ryb a sebeobraně.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            }
+        },
+        {
+            "id": "wooden_pickaxe",
+            "name": "Dřevěnný krumpáč",
+            "description": "Dřevěnný krumpáč slouží k těžbe nerostných surovin.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "3s"
+            },
+            "skillPoints": {
+                "type": "Mining",
+                "points": 5
+            }
+        },
+        {
+            "id": "stone_pickaxe",
+            "name": "Kamenný krumpáč",
+            "description": "Kamenný krumpáč slouží k těžbe nerostných surovin.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "stone",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 4
+                    }
+                ],
+                "craftingTime": "6s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            },
+            "skillPoints": {
+                "type": "Mining",
+                "points": 10
+            }
+        },
+        {
+            "id": "iron_pickaxe",
+            "name": "Železný krumpáč",
+            "description": "Železný krumpáč slouží k těžbe nerostných surovin.",
+            "weight": 3,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "weapon",
+            "damage": 2,
+            "staminaCost": 3,
+            "durability": 100,
+            "category": "melee",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Jednoduchá zbraň vyrobená vesničany.",
+            "craftable": true,
+            "crafting": {
+                "requiredMaterials": [                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "iron_bar",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "string",
+                        "quantity": 4
+                    }
+                ],
+                "craftingTime": "6s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "toolsRequired": [
+                    "wood_hammer",
+                    "stone_hammer",
+                    "iron_hammer"
+                ]
+            },
+            "skillPoints": {
+                "type": "Mining",
+                "points": 15
+            },
+            "levelRequirement": 3,
+            "npcPreference": ["Miner"],
+            "questItem": false,
+            "availabilitySeason": ["spring", "summer", "autumn", "winter"]
+        },
+        {
+            "id": "stamina_potion",
+            "name": "Lektvar výdrže",
+            "description": "Lektvar, který obnovuje výdrž.",
+            "weight": 1,
+            "value": 15,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "potion",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Osvěžující nápoj pro unavené dobrodruhy.",
+            "environmentEffect": null,
+            "effect": {
+                "type": "stamina",
+                "method": "gradual",
+                "valuePerInterval": "2%",
+                "interval": "5s",
+                "duration": "30s",
+                "totalHealing": "12%"
+            },
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_bottle",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "water",
+                        "quantity": 1
+                    },
+                    {
+                        "item": "rosemary",
+                        "quantity": 2
+                    }
+                ],
+                "craftingTime": "6s",
+                "toolsRequired": [
+                    "alchemy_table"
+                ]
+            }
+        },
+        {
+            "id": "bread",
+            "name": "Chléb",
+            "description": "Bochník chleba, který obnovuje malé množství hladu.",
+            "weight": 2,
+            "value": 3,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Čerstvě upečený v místní pekárně.",
+            "effect": {
+                "type": "hunger",
+                "method": "instant",
+                "value": 10
+            },
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "flour",
+                        "quantity": 2
+                    },
+                    {
+                        "item": "water",
+                        "quantity": 1
+                    }
+                ],
+                "craftingTime": "6s",
+                "toolsRequired": [
+                    "cooking_table"
+                ]
+            },
+            "shelfLife": 3,
+            "preservable": false,
+            "npcPreference": [
+                "Baker"
+            ],
+            "marketDemand": "high",
+            "decomposable": true,
+            "craftable": true,
+            "skillPoints": {
+                "type": "Production",
+                "points": 12
+            },
+            "npcPreference": ["Baker", "Villager"],
+            "questItem": false,
+            "availabilitySeason": ["spring", "summer", "autumn", "winter"]
+        },
+        {
+            "id": "apple",
+            "name": "Jablko",
+            "description": "Čerstvé jablko, které obnovuje malé množství hladu.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Utržené v blízkém sadu.",
+            "effect": [
+                {
+                    "type": "hunger",
+                    "method": "instant",
+                    "value": 5
+                },
+                {
+                    "type": "thirst",
+                    "method": "instant",
+                    "value": 5
+                }
+            ],
+            "shelfLife": 7,
+            "availabilitySeason": [
+                "autumn"
+            ],
+            "preservable": true,
+            "npcPreference": [
+                "John",
+                "Mary"
+            ],
+            "marketDemand": "high",
+            "decomposable": true,
+            "harvestable": {
+                "isHarvestable": true,
+                "source": "apple_tree",
+                "toolsRequired": [
+                    "basket"
+                ],
+                "season": [
+                    "autumn"
+                ],
+                "yieldPerTree": 10
+            }
+        },
+        {
+            "id": "pear",
+            "name": "Hruška",
+            "description": "Šťavnatá hruška, která obnovuje malé množství hladu a žízně.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizená z hrušně.",
+            "effect": [
+                {
+                    "type": "hunger",
+                    "method": "instant",
+                    "value": 5
+                },
+                {
+                    "type": "thirst",
+                    "method": "instant",
+                    "value": 5
+                }
+            ],
+            "harvestable": {
+                "isHarvestable": true,
+                "source": "pear_tree",
+                "toolsRequired": [
+                    "basket"
+                ],
+                "season": [
+                    "autumn"
+                ],
+                "yieldPerTree": 10
+            }
+        },
+        {
+            "id": "plum",
+            "name": "Švestka",
+            "description": "Sladká švestka, která obnovuje malé množství zdraví.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Utržená ze švestky.",
+            "effect": [
+                {
+                    "type": "hunger",
+                    "method": "instant",
+                    "value": 5
+                },
+                {
+                    "type": "thirst",
+                    "method": "instant",
+                    "value": 5
+                }
+            ],
+            "harvestable": {
+                "isHarvestable": true,
+                "source": "plum_tree",
+                "toolsRequired": [
+                    "basket"
+                ],
+                "season": [
+                    "autumn"
+                ],
+                "yieldPerTree": 10
+            }
+        },
+        {
+            "id": "cherry",
+            "name": "Třešně",
+            "description": "Hrst třešní, které obnovují malé množství zdraví.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané z třešně.",
+            "effect": [
+                {
+                    "type": "hunger",
+                    "method": "instant",
+                    "value": 5
+                },
+                {
+                    "type": "thirst",
+                    "method": "instant",
+                    "value": 5
+                }
+            ],
+            "harvestable": {
+                "isHarvestable": true,
+                "source": "cherry_tree",
+                "toolsRequired": [
+                    "basket"
+                ],
+                "season": [
+                    "autumn"
+                ],
+                "yieldPerTree": 10
+            }
+        },
+        {
+            "id": "strawberry",
+            "name": "Jahoda",
+            "description": "Hrst jahod, které obnovují malé množství zdraví.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Utržené z jahodového záhonu.",
+            "effect": [
+                {
+                    "type": "hunger",
+                    "method": "instant",
+                    "value": 5
+                },
+                {
+                    "type": "thirst",
+                    "method": "instant",
+                    "value": 5
+                }
+            ],
+            "harvestable": {
+                "isHarvestable": true,
+                "source": "strawberry_plant",
+                "toolsRequired": [
+                    "basket"
+                ],
+                "season": [
+                    "autumn"
+                ],
+                "yieldPerTree": 10
+            },
+            "npcPreference": ["Villager", "Child"],
+            "questItem": false,
+            "availabilitySeason": ["summer"]
+        },
+        {
+            "id": "raspberry",
+            "name": "Malina",
+            "description": "Hrst malin, které obnovují malé množství zdraví.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané z malinového keře.",
+            "effect": [
+                {
+                    "type": "hunger",
+                    "method": "instant",
+                    "value": 5
+                },
+                {
+                    "type": "thirst",
+                    "method": "instant",
+                    "value": 5
+                }
+            ],
+            "harvestable": {
+                "isHarvestable": true,
+                "source": "raspberries_plant",
+                "toolsRequired": [
+                    "basket"
+                ],
+                "season": [
+                    "autumn"
+                ],
+                "yieldPerTree": 10
+            }
+        },
+        {
+            "id": "carrot",
+            "name": "Mrkev",
+            "description": "Čerstvá mrkev, která obnovuje malé množství zdraví.",
+            "weight": 1,
+            "value": 2,
+            "type": "consumable",
+            "category": "food"
+        },
+        {
+            "id": "celery",
+            "name": "Celer",
+            "description": "Stvol celeru, který obnovuje malé množství zdraví.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizený ze zahrady.",
+            "environmentEffect": null
+        },
+        {
+            "id": "parsley",
+            "name": "Petržel",
+            "description": "Svazek petržele, užitečný při vaření.",
+            "weight": 1,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizená ze zahrady.",
+            "environmentEffect": null
+        },
+        {
+            "id": "onion",
+            "name": "Cibule",
+            "description": "Čerstvá cibule, užitečná při vaření.",
+            "weight": 1,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizená ze zahrady.",
+            "environmentEffect": null
+        },
+        {
+            "id": "cabbage",
+            "name": "Zelí",
+            "description": "Hlávka zelí, užitečná při vaření.",
+            "weight": 3,
+            "value": 3,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "medium",
+            "lore": "Sklizené z pole.",
+            "environmentEffect": null
+        },
+        {
+            "id": "rye",
+            "name": "Žito",
+            "description": "Svazek žita, užitečný při výrobě chleba.",
+            "weight": 2,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "grain",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizené z pole.",
+            "environmentEffect": null
+        },
+        {
+            "id": "oats",
+            "name": "Oves",
+            "description": "Svazek ovsa, užitečný při výrobě kaše.",
+            "weight": 2,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "grain",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizené z pole.",
+            "environmentEffect": null
+        },
+        {
+            "id": "barley",
+            "name": "Ječmen",
+            "description": "Svazek ječmene, užitečný při vaření piva.",
+            "weight": 2,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "grain",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizené z pole.",
+            "environmentEffect": null
+        },
+        {
+            "id": "poppy_seed",
+            "name": "Mák",
+            "description": "Svazek makových semínek, užitečný při vaření.",
+            "weight": 1,
+            "value": 3,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "herb",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizené z pole.",
+            "environmentEffect": null
+        },
+        {
+            "id": "wheat",
+            "name": "Pšenice",
+            "description": "Svazek pšenice, užitečný při výrobě mouky.",
+            "weight": 2,
+            "value": 2,
+            "type": "resource",
+            "category": "grain"
+        },
+        {
+            "id": "potato",
+            "name": "Brambora",
+            "description": "Čerstvá brambora, užitečná při vaření.",
+            "weight": 2,
+            "value": 2,
+            "dynamicValue": false,
+            "type": "consumable",
+            "category": "food",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sklizená z pole.",
+            "environmentEffect": null
+        },
+        {
+            "id": "pear_sapling",
+            "name": "Hruškový sazenice",
+            "description": "Mladý sazenice hrušně, připravený k zasazení.",
+            "weight": 2,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "sapling",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sazenice ze zdravé hrušně.",
+            "environmentEffect": "Can be planted to grow a pear tree.",
+            "growingSeason": [
+                "spring",
+                "summer"
+            ]
+        },
+        {
+            "id": "plum_sapling",
+            "name": "Švestkový sazenice",
+            "description": "Mladý sazenice švestky, připravený k zasazení.",
+            "weight": 2,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "sapling",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sazenice ze zdravé švestky.",
+            "environmentEffect": "Can be planted to grow a plum tree.",
+            "growingSeason": [
+                "spring",
+                "summer"
+            ]
+        },
+        {
+            "id": "cherry_sapling",
+            "name": "Třešňový sazenice",
+            "description": "Mladý sazenice třešně, připravený k zasazení.",
+            "weight": 2,
+            "value": 5,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "sapling",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sazenice ze zdravé třešně.",
+            "environmentEffect": "Can be planted to grow a cherry tree.",
+            "growingSeason": [
+                "spring"
+            ]
+        },
+        {
+            "id": "strawberry_seedling",
+            "name": "Jahodový sazenice",
+            "description": "Malá jahodová rostlina, připravená k zasazení.",
+            "weight": 1,
+            "value": 3,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "sapling",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sazenice z jahodového záhonu.",
+            "environmentEffect": "Can be planted to grow strawberries.",
+            "growingSeason": [
+                "spring",
+                "summer"
+            ]
+        },
+        {
+            "id": "raspberry_seedling",
+            "name": "Malinový sazenice",
+            "description": "Malá malinová rostlina, připravená k zasazení.",
+            "weight": 1,
+            "value": 3,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "sapling",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sazenice z malinového keře.",
+            "environmentEffect": "Can be planted to grow raspberries.",
+            "growingSeason": [
+                "spring",
+                "summer"
+            ]
+        },
+        {
+            "id": "carrot_seed",
+            "name": "Mrkvové semínko",
+            "description": "Semínko pro pěstování mrkve.",
+            "weight": 0.5,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "seed",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané ze zdravé mrkvové rostliny.",
+            "environmentEffect": "Can be planted to grow carrots.",
+            "growingSeason": [
+                "spring",
+                "summer",
+                "autumn"
+            ],
+            "weatherPreference": [
+                "rainy"
+            ],
+            "fertilizerEffect": "growth speed increased by 20%",
+            "marketDemand": "medium",
+            "decomposable": true,
+            "craftable": false,
+            "skillPoints": {
+                "type": "Farming",
+                "points": 7
+            },
+            "npcPreference": ["Farmer"],
+            "questItem": false,
+            "availabilitySeason": ["spring", "summer", "autumn"]
+        },
+        {
+            "id": "celery_seed",
+            "name": "Celerové semínko",
+            "description": "Semínko pro pěstování celeru.",
+            "weight": 0.5,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "seed",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané ze zdravé celerové rostliny.",
+            "environmentEffect": "Can be planted to grow celery.",
+            "growingSeason": [
+                "spring",
+                "summer"
+            ]
+        },
+        {
+            "id": "parsley_seed",
+            "name": "Petrželové semínko",
+            "description": "Semínko pro pěstování petržele.",
+            "weight": 0.5,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "seed",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané ze zdravé petrželové rostliny.",
+            "environmentEffect": "Can be planted to grow parsley."
+        },
+        {
+            "id": "onion_seed",
+            "name": "Cibulové semínko",
+            "description": "Semínko pro pěstování cibule.",
+            "weight": 0.5,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "seed",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané ze zdravé cibulové rostliny.",
+            "environmentEffect": "Can be planted to grow onions."
+        },
+        {
+            "id": "cabbage_seed",
+            "name": "Zelné semínko",
+            "description": "Semínko pro pěstování zelí.",
+            "weight": 0.5,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "seed",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané ze zdravé zelně rostliny.",
+            "environmentEffect": "Can be planted to grow cabbage."
+        },
+        {
+            "id": "wheat_seed",
+            "name": "Pšeničné semínko",
+            "description": "Semínko pro pěstování pšenice.",
+            "weight": 0.5,
+            "value": 1,
+            "type": "resource",
+            "category": "seed",
+            "growingSeason": [
+                "spring",
+                "summer"
+            ],
+            "output": {
+                "cropId": "wheat",
+                "quantity": 3
+            }
+        },
+        {
+            "id": "potato_seed",
+            "name": "Bramborové semínko",
+            "description": "Semínko pro pěstování brambor.",
+            "weight": 0.5,
+            "value": 1,
+            "dynamicValue": false,
+            "type": "resource",
+            "category": "seed",
+            "rarity": "common",
+            "weightCategory": "light",
+            "lore": "Sesbírané ze zdravé bramborové rostliny.",
+            "environmentEffect": "Can be planted to grow potatoes."
+        },
+        {
+            "id": "wooden_pins",
+            "name": "Dřevěné kolíky",
+            "description": "Dřevěné kolíky použitelné při stavbě.",
+            "weight": 0.5,
+            "value": 1,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    {
+                        "item": "wood_log",
+                        "quantity": 1
+                    }
+                ]
+            }
+        },
+        {
+            "id": "wooden_wedge",
+            "name": "Dřevěný klín",
+            "description": "Dřevěný klín používaný při stavbě.",
+            "weight": 0.5,
+            "value": 1,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    { "item": "wood_log", "quantity": 1 }
+                ],
+                "craftingTime": "2s",
+                "yieldQuantity": 5
+            }
+        },
+        {
+            "id": "straw",
+            "name": "Sláma",
+            "description": "Sláma používaná při stavbě a výrobě.",
+            "weight": 0.2,
+            "value": 1,
+            "type": "resource",
+            "harvestable": {
+                "isHarvestable": true,
+                "sources": [
+                    { "type": "farm", "yieldPerHarvest": 10 }
+                ]
+            },
+            "production": {
+                "building": "barn",
+                "input": [
+                    { "item": "wheat", "quantity": 1 }
+                ],
+                "output": [
+                    { "item": "straw", "quantity": 2 },
+                    { "item": "wheat_seed", "quantity": 1 }
+                ]
+            }
+        },
+        {
+            "id": "bricks",
+            "name": "Cihly",
+            "description": "Cihly se používají při stavbě.",
+            "weight": 4,
+            "value": 3,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    { "item": "clay", "quantity": 2 },
+                    { "item": "water", "quantity": 1 }
+                ],
+                "craftingTime": "5s",
+                "buildingRequired": [
+                    "forge"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "mortar",
+            "name": "Malta",
+            "description": "Malta používaná při stavbě.",
+            "weight": 2,
+            "value": 2,
+            "type": "resource",
+            "crafting": {
+                "requiredMaterials": [
+                    { "item": "clay", "quantity": 1 },
+                    { "item": "water", "quantity": 1 },
+                    { "item": "limestone", "quantity": 1 }
+                ],
+                "craftingTime": "3s",
+                "buildingRequired": [
+                    "craftable"
+                ],
+                "yieldQuantity": 1
+            }
+        },
+        {
+            "id": "hay",
+            "name": "Seno",
+            "description": "Seno používané při stavbě a krmení zvířat.",
+            "weight": 0.5,
+            "value": 1,
+            "type": "resource",
+            "harvestable": {
+                "isHarvestable": true,
+                "sources": [
+                    { "type": "farm", "yieldPerHarvest": 15 }
+                ]
+            }
+        },
+    {
+        "id": "rope",
+        "name": "Provaz",
+        "description": "Provaz používaný při stavbě a výrobě.",
+        "weight": 1,
+        "value": 2,
+        "type": "resource",
+        "crafting": {
+            "requiredMaterials": [
+                {
+                    "item": "flex",
+                    "quantity": 4
+                }
+            ],
+            "craftingTime": "4s",
+            "yieldQuantity": 1
+        },
+        "skillPoints": {
+            "type": "Farming",
+            "points": 7
+        }
+    },
+    {
+        "id": "seed_flax",
+        "name": "Len",
+        "description": "Druh plodiny, ze které se vyrábí lněné vlákno.",
+        "weight": 0.5,
+        "value": 1,
+        "dynamicValue": false,
+        "type": "resource",
+        "category": "seed",
+        "rarity": "common",
+        "weightCategory": "light",
+        "growingSeason": [
+            "spring",
+            "summer",
+            "autumn"
+        ],
+        "weatherPreference": [
+            "rainy",
+            "sunny"
+        ],
+        "fertilizerEffect": "growth speed increased by 20%",
+        "marketDemand": "medium",
+        "decomposable": true,
+        "craftable": false,
+        "skillPoints": {
+            "type": "Farming",
+            "points": 7
+        },
+        "npcPreference": ["Farmer"],
+        "questItem": false,
+        "availabilitySeason": ["spring", "summer", "autumn"]
+    }
+    ]
+}

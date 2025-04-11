@@ -1,0 +1,911 @@
+{
+  "buildings": [
+    {
+      "id": "wood_house",
+      "name": "Dřevěný dům",
+      "description": "Základní úkryt, který vás ochrání před nepřízní počasí.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "wooden_stick", "quantity": 80 },
+        { "item": "stone", "quantity": 20 },
+        { "item": "straw", "quantity": 60 },
+        { "item": "wooden_wedge", "quantity": 100 }
+      ],
+      "functions": ["rest", "eat", "hide"],
+      "temperature": {
+        "summer": 30,
+        "winter": 15
+      },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení domu jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 60 },
+            { "item": "stone_bricks", "quantity": 30 },
+            { "item": "clay_bricks", "quantity": 20 }
+          ],
+          "temperature_after_upgrade": {
+            "summer": 28,
+            "winter": 20
+          }
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 40 },
+            { "item": "straw", "quantity": -60 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "stone_house",
+      "name": "Kamenný dům",
+      "description": "Lepší úkryt, který vás ochrání před nepřízní počasí.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "stone_bricks", "quantity": 60 },
+        { "item": "straw", "quantity": 60 },
+        { "item": "mortar", "quantity": 40 }
+      ],
+      "functions": ["rest", "eat", "hide"],
+      "temperature": {
+        "summer": 25,
+        "winter": 18
+      },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení domu jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 60 },
+            { "item": "stone_bricks", "quantity": 30 },
+            { "item": "clay_bricks", "quantity": 20 }
+          ],
+          "temperature_after_upgrade": {
+            "summer": 25,
+            "winter": 23
+          }
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 40 },
+            { "item": "straw", "quantity": -60 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "workshop",
+      "name": "Dílna",
+      "description": "Místo pro výrobu nástrojů a předmětů.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "stone", "quantity": 5 }
+      ],
+      "functions": ["craft"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení dílny jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "farm",
+      "name": "Farma",
+      "description": "Produkuje jídlo v průběhu času.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 8 },
+        { "item": "seeds", "quantity": 3 }
+      ],
+      "functions": ["produce_food"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení farmy jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+{
+  "id": "field",
+  "name": "Pole",
+  "description": "Dynamicky vytvořené pole pro pěstování plodin.",
+  "dimensions": { "width": 2, "height": 2 },
+  "states": {
+    "unprepared": {
+      "description": "Pole není připraveno k sázení.",
+      "requiredAction": "use_hoe"
+    },
+    "prepared": {
+      "description": "Pole je připraveno k sázení.",
+      "allowedActions": ["plant_seeds"]
+    },
+    "planted": {
+      "description": "Pole má zaseté plodiny.",
+      "allowedActions": ["water", "fertilize"]
+    },
+    "harvested": {
+      "description": "Plodiny byly sklizeny. Pole je možné znovu připravit.",
+      "requiredAction": "use_hoe"
+    }
+  },
+  "toolsRequired": ["wood_hoe", "stone_hoe", "iron_hoe"],
+  "visualRepresentation": {
+    "boundary": "wooden_stakes",
+    "soilTexture": {
+      "unprepared": "default",
+      "prepared": "plowed"
+    }
+  },
+  "functions": ["prepare_field", "plant_seeds", "harvest_crops"]
+  }
+  "cropNames": [
+    "Pšenice",
+    "Mrkev",
+    "Jablko",
+    "Brambory",
+    "Rajčata",
+    "Okurky",
+    "Hrách",
+    "Kukuřice",
+    "Rýže",
+    "Slunečnice"
+  ]
+}
+    {
+      "id": "watchtower",
+      "name": "Strážní věž",
+      "description": "Věž pro pozorování nepřátel z dálky.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 15 },
+        { "item": "stone", "quantity": 10 }
+      ],
+      "functions": ["defend"],
+      "maintenanceCost": { "item": "food", "quantity": 2 },
+      "environmentalBonus": { "nearby": "forest", "effect": "increased_visibility" },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení věže jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "barracks",
+      "name": "Kasárna",
+      "description": "Místo pro výcvik vojáků.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 20 },
+        { "item": "iron", "quantity": 10 }
+      ],
+      "functions": ["train"],
+      "maintenanceCost": { "item": "food", "quantity": 5 },
+      "interactions": { "requires": "farm", "effect": "provides_food_for_training" },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení kasáren jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 60 },
+            { "item": "stone_bricks", "quantity": 30 },
+            { "item": "clay_bricks", "quantity": 20 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 40 },
+            { "item": "straw", "quantity": -60 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "granary",
+      "name": "Sýpka",
+      "description": "Ukládá jídlo a zvyšuje jeho efektivitu.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 12 },
+        { "item": "stone", "quantity": 8 }
+      ],
+      "functions": ["store_food"],
+      "environmentalBonus": { "nearby": "farm", "effect": "increased_food_storage" },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení sýpky jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "market",
+      "name": "Tržiště",
+      "description": "Místo pro obchodování se surovinami.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 15 },
+        { "item": "stone", "quantity": 10 }
+      ],
+      "functions": ["trade"],
+      "seasonalEffect": { "season": "winter", "effect": "reduced_trading_efficiency" },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení tržiště jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "statue",
+      "name": "Socha",
+      "description": "Dekorativní socha, která zvyšuje morálku.",
+      "requiredMaterials": [
+        { "item": "stone", "quantity": 20 },
+        { "item": "gold", "quantity": 5 }
+      ],
+      "functions": ["boost_morale"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení sochy jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "library",
+      "name": "Knihovna",
+      "description": "Místo pro výzkum nových technologií.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "paper", "quantity": 5 }
+      ],
+      "functions": ["research"],
+      "technologyUnlocks": ["advanced_farming", "stone_masonry"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení knihovny jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "fire_station",
+      "name": "Hasičská stanice",
+      "description": "Chrání budovy před požáry.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 20 },
+        { "item": "iron", "quantity": 10 }
+      ],
+      "functions": ["prevent_fire"],
+      "eventProtection": { "event": "fire", "effect": "reduced_damage" },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení stanice jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 60 },
+            { "item": "stone_bricks", "quantity": 30 },
+            { "item": "clay_bricks", "quantity": 20 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 40 },
+            { "item": "straw", "quantity": -60 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "mine",
+      "name": "Důl",
+      "description": "Místo pro těžbu cenných minerálů.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "stone", "quantity": 15 }
+      ],
+      "functions": ["extract_resources"],
+      "produces": [
+        { "item": "copper_ore", "quantity": 2 },
+        { "item": "gold_ore", "quantity": 0.5 },
+        { "item": "stone", "quantity": 10 },
+        { "item": "clay", "quantity": 4 },
+        { "item": "iron_ore", "quantity": 1 }
+      ],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení dolu jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "lumber_mill",
+      "name": "Pila",
+      "description": "Zpracovává dřevo.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 20 },
+        { "item": "stone", "quantity": 10 }
+      ],
+      "functions": ["process_wood"],
+      "processing": {
+        "input": [
+          { "item": "wood_log", "quantity": 1 }
+        ],
+        "output": [
+          { "item": "plank", "quantity": 5 },
+          { "item": "wooden_pins", "quantity": 10 }
+        ]
+      },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení pily jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "stables",
+      "name": "Stáje",
+      "description": "Poskytují koně pro rychlejší dopravu.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 15 },
+        { "item": "hay", "quantity": 10 }
+      ],
+      "functions": ["provide_transport"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení stájí jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "hospital",
+      "name": "Nemocnice",
+      "description": "Léčí zraněné obyvatele.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 20 },
+        { "item": "stone", "quantity": 15 }
+      ],
+      "functions": ["heal"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení nemocnice jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 60 },
+            { "item": "stone_bricks", "quantity": 30 },
+            { "item": "clay_bricks", "quantity": 20 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 40 },
+            { "item": "straw", "quantity": -60 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "warehouse",
+      "name": "Sklad",
+      "description": "Zvyšuje kapacitu pro ukládání surovin.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 15 },
+        { "item": "stone", "quantity": 10 }
+      ],
+      "functions": ["store_resources"],
+      "storageBonus": { "capacity": 100 },
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení skladu jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "wall",
+      "name": "Zeď",
+      "description": "Poskytuje obranu proti nepřátelům.",
+      "requiredMaterials": [
+        { "item": "stone", "quantity": 30 }
+      ],
+      "functions": ["defend"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení zdi jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "school",
+      "name": "Škola",
+      "description": "Vzdělává obyvatele a zlepšuje jejich dovednosti.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "paper", "quantity": 5 }
+      ],
+      "functions": ["educate"],
+      "bonuses": {
+        "skill_increase": 10,
+        "learning_speed": 20
+      },
+      "capacity": 20,
+      "maintenanceCost": [
+        { "item": "paper", "quantity": 2 },
+        { "item": "food", "quantity": 5 }
+      ],
+      "environmentalBonus": {
+        "nearby": "residential_area",
+        "effect": "increased_happiness"
+      },
+      "technologyUnlocks": ["advanced_farming", "stone_masonry"],
+      "level": 1,
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení školy jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 50 },
+            { "item": "stone_bricks", "quantity": 25 },
+            { "item": "clay_bricks", "quantity": 15 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 30 },
+            { "item": "straw", "quantity": -50 },
+            { "item": "stone_bricks", "quantity": 15 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "hunting_cabin",
+      "name": "Lovecká chata",
+      "description": "Chata pro lovce, kteří sbírají maso a kůže.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 12 },
+        { "item": "stone", "quantity": 5 }
+      ],
+      "functions": ["hunt"],
+      "produces": ["meat", "hide", "leather"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení lovecké chaty jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "logging_camp",
+      "name": "Tábory dřevorubců",
+      "description": "Tábor pro kácení stromů a sběr dřeva.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 10 },
+        { "item": "stone", "quantity": 8 }
+      ],
+      "functions": ["gather_wood"],
+      "produces": ["wood_log", "wood_stick", "feather"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení tábora jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "herbalist_hut",
+      "name": "Bylinkářova chata",
+      "description": "Chata pro sběr bylin a léčivých rostlin.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 8 },
+        { "item": "stone", "quantity": 5 }
+      ],
+      "functions": ["gather_herbs"],
+      "produces": ["herbs"],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení bylinkářovy chaty jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    },
+    {
+      "id": "fishing_dock",
+      "name": "Rybářský přístav",
+      "description": "Přístav pro rybolov a sběr mořských plodů.",
+      "requiredMaterials": [
+        { "item": "wood_log", "quantity": 15 },
+        { "item": "rope", "quantity": 5 }
+      ],
+      "functions": ["fish"],
+      "produces": [
+        { "item": "salmon", "quantity": 3 },
+        { "item": "trout", "quantity": 2 },
+        { "item": "tuna", "quantity": 1 },
+        { "item": "catfish", "quantity": 2 }
+      ],
+      "upgradeOptions": {
+        "insulation": {
+          "description": "Zateplení přístavu jílem pro lepší ochranu před zimou.",
+          "requiredMaterials": [
+            { "item": "clay", "quantity": 40 },
+            { "item": "stone_bricks", "quantity": 20 },
+            { "item": "clay_bricks", "quantity": 10 }
+          ]
+        },
+        "roof_upgrade": {
+          "description": "Výměna střechy za prkna pro lepší ochranu před deštěm.",
+          "requiredMaterials": [
+            { "item": "plank", "quantity": 25 },
+            { "item": "straw", "quantity": -40 },
+            { "item": "stone_bricks", "quantity": 10 },
+            { "item": "clay_bricks", "quantity": 5 }
+          ],
+          "returnMaterials": {
+            "straw": 0.5
+          },
+          "benefits": {
+            "durability": "increased",
+            "weather_protection": "improved"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "quests": [
+    {
+      "id": "gather_wood",
+      "name": "quests.gather_wood.name",
+      "description": "quests.gather_wood.description",
+      "objectives": [
+        { "type": "collect", "item": "wood_log", "quantity": 10 }
+      ],
+      "rewards": [
+        { "item": "gold_coin", "quantity": 5 },
+        { "item": "experience_points", "quantity": 10 }
+      ],
+      "alternative_rewards": [
+        { "item": "wooden_shield", "quantity": 1 },
+        { "item": "healing_potion", "quantity": 2 }
+      ],
+      "difficulty": "easy",
+      "time_limit": 600,
+      "story": "quests.gather_wood.story",
+      "tags": ["gathering", "resource"],
+      "recommended_level": 1,
+      "dialogues": {
+        "start": "quests.gather_wood.dialogues.start",
+        "complete": "quests.gather_wood.dialogues.complete",
+        "fail": "quests.gather_wood.dialogues.fail"
+      },
+      "random_events": [
+        {
+          "id": "forest_fire",
+          "description": "A sudden forest fire breaks out, making it harder to gather wood.",
+          "effect": "Reduce time limit by 200 seconds."
+        },
+        {
+          "id": "helpful_villager",
+          "description": "A villager offers to help you gather wood.",
+          "effect": "Increase wood collection speed by 50%."
+        }
+      ]
+    },
+    {
+      "id": "defeat_wolves",
+      "name": "quests.defeat_wolves.name",
+      "description": "quests.defeat_wolves.description",
+      "objectives": [
+        { "type": "defeat", "enemy": "wolf", "quantity": 5 }
+      ],
+      "rewards": [
+        { "item": "gold_coin", "quantity": 10 },
+        { "item": "wolf_pelt", "quantity": 3 },
+        { "item": "experience_points", "quantity": 20 }
+      ],
+      "alternative_rewards": [
+        { "item": "wolf_cloak", "quantity": 1 },
+        { "item": "stamina_potion", "quantity": 2 }
+      ],
+      "difficulty": "medium",
+      "time_limit": 900,
+      "story": "quests.defeat_wolves.story",
+      "tags": ["combat", "protection"],
+      "recommended_level": 3,
+      "dialogues": {
+        "start": "quests.defeat_wolves.dialogues.start",
+        "complete": "quests.defeat_wolves.dialogues.complete",
+        "fail": "quests.defeat_wolves.dialogues.fail"
+      },
+      "random_events": [
+        {
+          "id": "alpha_wolf",
+          "description": "An alpha wolf appears, making the fight more challenging.",
+          "effect": "Add a stronger wolf to the enemies."
+        },
+        {
+          "id": "hunter_help",
+          "description": "A hunter joins you to help defeat the wolves.",
+          "effect": "Reduce the number of wolves to defeat by 2."
+        }
+      ]
+    },
+    {
+      "id": "find_amulet",
+      "name": "quests.find_amulet.name",
+      "description": "quests.find_amulet.description",
+      "objectives": [
+        { "type": "find", "item": "lost_amulet", "location": "dark_forest" }
+      ],
+      "rewards": [
+        { "item": "gold_coin", "quantity": 15 },
+        { "item": "magic_scroll", "quantity": 1 },
+        { "item": "experience_points", "quantity": 30 }
+      ],
+      "alternative_rewards": [
+        { "item": "enchanted_ring", "quantity": 1 },
+        { "item": "mana_potion", "quantity": 2 }
+      ],
+      "difficulty": "hard",
+      "time_limit": 1200,
+      "story": "quests.find_amulet.story",
+      "tags": ["exploration", "retrieval"],
+      "recommended_level": 5,
+      "dialogues": {
+        "start": "quests.find_amulet.dialogues.start",
+        "complete": "quests.find_amulet.dialogues.complete",
+        "fail": "quests.find_amulet.dialogues.fail"
+      },
+      "random_events": [
+        {
+          "id": "lost_path",
+          "description": "You lose your way in the forest, delaying your progress.",
+          "effect": "Increase time limit by 300 seconds."
+        },
+        {
+          "id": "guardian_spirit",
+          "description": "A guardian spirit offers guidance to the amulet.",
+          "effect": "Reveal the exact location of the amulet."
+        }
+      ]
+    },
+    {
+      "id": "rescue_villager",
+      "name": "quests.rescue_villager.name",
+      "description": "quests.rescue_villager.description",
+      "objectives": [
+        { "type": "find", "item": "villager", "location": "bandit_camp" },
+        { "type": "defeat", "enemy": "bandit", "quantity": 3 }
+      ],
+      "rewards": [
+        { "item": "gold_coin", "quantity": 20 },
+        { "item": "experience_points", "quantity": 50 }
+      ],
+      "alternative_rewards": [
+        { "item": "rare_sword", "quantity": 1 },
+        { "item": "healing_potion", "quantity": 3 },
+        { "item": "armor_upgrade", "quantity": 1 }
+      ],
+      "difficulty": "medium",
+      "time_limit": 1800,
+      "story": "quests.rescue_villager.story",
+      "npc": {
+        "id": "village_chief",
+        "role": "Quest Giver",
+        "description": "The leader of the village, responsible for the safety of its people."
+      },
+      "status": "active",
+      "events": {
+        "on_complete": "The villager thanks you and returns to the village.",
+        "on_fail": "The bandits relocate, and the villager is lost.",
+        "on_progress": "You have defeated some bandits, but the villager is still in danger."
+      },
+      "dialogues": {
+        "start": "quests.rescue_villager.dialogues.start",
+        "complete": "quests.rescue_villager.dialogues.complete",
+        "fail": "quests.rescue_villager.dialogues.fail"
+      },
+      "tags": ["rescue", "combat"],
+      "recommended_level": 4,
+      "random_events": [
+        {
+          "id": "bandit_reinforcements",
+          "description": "Bandit reinforcements arrive, increasing the challenge.",
+          "effect": "Add 2 more bandits to defeat."
+        },
+        {
+          "id": "hidden_path",
+          "description": "You discover a hidden path to the villager.",
+          "effect": "Reduce time limit by 300 seconds but skip some enemies."
+        }
+      ]
+    },
+    {
+      "id": "escort_merchant",
+      "name": "quests.escort_merchant.name",
+      "description": "quests.escort_merchant.description",
+      "objectives": [
+        { "type": "escort", "npc": "merchant", "destination": "next_town" }
+      ],
+      "rewards": [
+        { "item": "gold_coin", "quantity": 30 },
+        { "item": "rare_gem", "quantity": 1 },
+        { "item": "experience_points", "quantity": 60 }
+      ],
+      "alternative_rewards": [
+        { "item": "merchant_voucher", "quantity": 1 },
+        { "item": "magic_ring", "quantity": 1 },
+        { "item": "golden_compass", "quantity": 1 }
+      ],
+      "difficulty": "hard",
+      "time_limit": 2400,
+      "story": "quests.escort_merchant.story",
+      "npc": {
+        "id": "merchant",
+        "role": "Trader",
+        "description": "A traveling merchant who trades goods between towns."
+      },
+      "status": "active",
+      "events": {
+        "on_complete": "The merchant safely reaches the town and rewards you.",
+        "on_fail": "The merchant is attacked, and the goods are stolen.",
+        "on_progress": "You are halfway to the destination. Stay alert for bandits."
+      },
+      "dialogues": {
+        "start": "quests.escort_merchant.dialogues.start",
+        "complete": "quests.escort_merchant.dialogues.complete",
+        "fail": "quests.escort_merchant.dialogues.fail"
+      },
+      "tags": ["escort", "protection"],
+      "recommended_level": 6,
+      "random_events": [
+        {
+          "id": "bandit_ambush",
+          "description": "Bandits ambush you on the road.",
+          "effect": "Add a combat encounter with 3 bandits."
+        },
+        {
+          "id": "shortcut",
+          "description": "The merchant finds a shortcut to the destination.",
+          "effect": "Reduce time limit by 500 seconds."
+        }
+      ]
+    }
+  ]
+}

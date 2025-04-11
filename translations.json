@@ -1,0 +1,54 @@
+{
+  "quests": {
+    "gather_wood": {
+      "name": "Gather Wood",
+      "description": "Collect 10 wood logs for the village.",
+      "story": "The village needs wood to repair the houses after a storm.",
+      "dialogues": {
+        "start": "Please gather wood for the village.",
+        "complete": "Thank you for bringing the wood!",
+        "fail": "We still need wood to repair the houses."
+      }
+    },
+    "defeat_wolves": {
+      "name": "Defeat the Wolves",
+      "description": "Eliminate 5 wolves threatening the village.",
+      "story": "Wolves have been attacking the villagers. Protect them by eliminating the threat.",
+      "dialogues": {
+        "start": "The wolves are attacking! Please help us.",
+        "complete": "You saved us from the wolves. Thank you!",
+        "fail": "The wolves are still a threat to the village."
+      }
+    },
+    "find_amulet": {
+      "name": "Find the Lost Amulet",
+      "description": "Locate and retrieve the lost amulet from the forest.",
+      "story": "The village elder lost a magical amulet in the forest. It must be retrieved before it falls into the wrong hands.",
+      "dialogues": {
+        "start": "Please find the lost amulet in the forest.",
+        "complete": "You found the amulet! The village is safe.",
+        "fail": "The amulet is still missing. We are in danger."
+      }
+    },
+    "rescue_villager": {
+      "name": "Rescue the Villager",
+      "description": "Save the villager captured by bandits.",
+      "story": "A villager has been kidnapped by bandits. You must infiltrate their camp and rescue them.",
+      "dialogues": {
+        "start": "Please, you must save our villager from the bandits!",
+        "complete": "Thank you for rescuing our villager. We are forever in your debt.",
+        "fail": "The villager is lost... How could this happen?"
+      }
+    },
+    "escort_merchant": {
+      "name": "Escort the Merchant",
+      "description": "Protect the merchant traveling to the next town.",
+      "story": "A merchant needs protection from bandits on the road to the next town.",
+      "dialogues": {
+        "start": "I need protection on my journey to the next town. Will you help me?",
+        "complete": "Thank you for your help! Here is your reward.",
+        "fail": "The bandits attacked, and I lost everything..."
+      }
+    }
+  }
+}

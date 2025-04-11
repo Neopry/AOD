@@ -1,0 +1,92 @@
+{
+  "recipes": [
+    {
+      "id": "wooden_sword_recipe",
+      "name": "Recept na dřevěný meč",
+      "description": "Vyrobte základní dřevěný meč pomocí dřevěných klád.",
+      "ingredients": [
+        { "item": "wood_log", "quantity": 3 }
+      ],
+      "result": { "item": "wooden_sword", "quantity": 1 }
+    },
+    {
+      "id": "stone_sword_recipe",
+      "name": "Recept na kamenný meč",
+      "description": "Vyrobte pevný kamenný meč pomocí dřevěných klád a kamenů.",
+      "ingredients": [
+        { "item": "wood_log", "quantity": 2 },
+        { "item": "stone", "quantity": 3 }
+      ],
+      "result": { "item": "stone_sword", "quantity": 1 }
+    },
+    {
+      "id": "iron_sword_recipe",
+      "name": "Recept na železný meč",
+      "description": "Vyrobte ostrý železný meč pomocí dřevěných klád a železných ingotů.",
+      "ingredients": [
+        { "item": "wood_log", "quantity": 1 },
+        { "item": "iron_ingot", "quantity": 3 }
+      ],
+      "result": { "item": "iron_sword", "quantity": 1 }
+    },
+    {
+      "id": "bread_recipe",
+      "name": "Recept na chléb",
+      "description": "Upečte chléb pomocí pšenice.",
+      "ingredients": [
+        { "item": "wheat", "quantity": 3 }
+      ],
+      "result": { "item": "bread", "quantity": 1 }
+    },
+    {
+      "id": "health_potion_recipe",
+      "name": "Recept na lektvar zdraví",
+      "description": "Uvařte lektvar zdraví pomocí bylin a vody.",
+      "ingredients": [
+        { "item": "poppy", "quantity": 1 },
+        { "item": "water_bottle", "quantity": 1 }
+      ],
+      "result": { "item": "health_potion", "quantity": 1 }
+    },
+    {
+      "id": "stamina_potion_recipe",
+      "name": "Recept na lektvar výdrže",
+      "description": "Uvařte lektvar výdrže pomocí bylin a vody.",
+      "ingredients": [
+        { "item": "parsley", "quantity": 1 },
+        { "item": "water_bottle", "quantity": 1 }
+      ],
+      "result": { "item": "stamina_potion", "quantity": 1 }
+    },
+    {
+      "id": "pear_sapling_recipe",
+      "name": "Recept na sazenici hrušně",
+      "description": "Vyrobte sazenici hrušně pomocí hrušky a dřevěných klád.",
+      "ingredients": [
+        { "item": "pear", "quantity": 1 },
+        { "item": "wood_log", "quantity": 2 }
+      ],
+      "result": { "item": "pear_sapling", "quantity": 1 }
+    },
+    {
+      "id": "plum_sapling_recipe",
+      "name": "Recept na sazenici švestky",
+      "description": "Vyrobte sazenici švestky pomocí švestky a dřevěných klád.",
+      "ingredients": [
+        { "item": "plum", "quantity": 1 },
+        { "item": "wood_log", "quantity": 2 }
+      ],
+      "result": { "item": "plum_sapling", "quantity": 1 }
+    },
+    {
+      "id": "cherry_sapling_recipe",
+      "name": "Recept na sazenici třešně",
+      "description": "Vyrobte sazenici třešně pomocí třešně a dřevěných klád.",
+      "ingredients": [
+        { "item": "cherry", "quantity": 1 },
+        { "item": "wood_log", "quantity": 2 }
+      ],
+      "result": { "item": "cherry_sapling", "quantity": 1 }
+    }
+  ]
+}
